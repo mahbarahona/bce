@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary-50: #f2f5fc;
+  --color-primary-100: #e1e8f8;
+  --color-primary-200: #cad8f3;
+  --color-primary-300: #a6bfea;
+  --color-primary-400: #7c9dde;
+  --color-primary-500: #5d7dd4;
+  --color-primary-600: #4962c7;
+  --color-primary-700: #3e50b4;
+  --color-primary-800: #384495;
+  --color-primary-900: #323c76;
+  --color-primary-950: #222749;
+
+  --color-primary: var(--color-primary-700);
+
+  --color-text: var(--color-primary-200);
+  --border-radius: 6px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  height: 100%;
+}
+
+button {
+  min-height: 56px;
+  border-radius: 40px;
+}

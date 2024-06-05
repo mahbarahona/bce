@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="content">
+    <h2>¡Hola {{ user.name }}!</h2>
+    <div class="actions">
+      <button class="btn-huella" aria-label="Ingresar" (click)="login()">
+        Ingresar
+      </button>
+      <a class="olvidaste-clave" [routerLink]="RECUPERAR_CLAVE"
+        >¿Olvidaste tu clave?</a
+      >
+    </div>
+  </div>
+</div>

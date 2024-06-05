@@ -1,0 +1,57 @@
+:host {
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  height: 100%;
+  padding: 1rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-primary-50);
+
+  .btn-huella {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+
+    color: var(--color-primary);
+    border: 3px solid var(--color-primary-600);
+  }
+  .olvidaste-clave {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    background-color: var(--color-primary-700);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 30%;
+    h2 {
+      font-size: 3rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin: 0 auto;
+    }
+  }
+}

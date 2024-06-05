@@ -1,0 +1,64 @@
+<h2>Ingresa tu domicilio</h2>
+
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-control">
+      <label for="regiones">Región</label>
+      <select id="regiones" name="regiones" formControlName="region">
+        <option value="" disabled selected>Selecciona una región</option>
+
+        @for(region of regions; track region.id){
+        <option [value]="region.id">{{ region.name | titlecase }}</option>
+        }
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="sector">Villa, población o sector (opcional)</label>
+      <input
+        id="sector"
+        type="text"
+        formControlName="sector"
+        placeholder="Ingresa villa, población o sector"
+      />
+    </div>
+    <div class="sinnumero_container">
+      <div class="form-control numero" [class.inactive]="form.value.sinNumero">
+        <label for="numero">Número</label>
+        <input
+          id="numero"
+          type="number"
+          formControlName="numero"
+          placeholder="Ingresa número"
+        />
+      </div>
+      <div class="form-control checkbox">
+        <label for="sin-numero">Sin número</label>
+        <input id="sin-numero" type="checkbox" formControlName="sinNumero" />
+      </div>
+    </div>
+
+    <details>
+      <summary></summary>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </details>
+    <button type="submit" [disabled]="form.invalid">Continuar</button>
+  </form>
+  <div class="banner">
+    <h3>Ingresa tu domicilio.</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum autem
+      consequatur est nulla unde recusandae, dolore mollitia dolores eligendi
+      architecto ipsum. Ipsa explicabo numquam at quasi esse atque! Error,
+      eligendi?
+    </p>
+  </div>
+</div>
